@@ -24,6 +24,7 @@ body {
   min-height: 100vh;
   margin: 0;
   display: flex;
+  flex-direction: column; /* Ubah ke column agar scroll mengalir ke bawah */
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
@@ -529,10 +530,11 @@ body::after {
 /* Responsive - Diperluas ke 768px untuk cover semua jenis HP modern */
 @media (max-width: 768px) {
   body {
+    height: auto !important; /* Biar body bisa memanjang sesuai konten */
     min-height: 100vh;
-    overflow-y: auto !important;
+    overflow-y: visible !important; /* Gunakan visible agar scroll induk aktif */
     overflow-x: hidden;
-    background-attachment: scroll;
+    display: block; /* Agar container mengalir secara alami */
   }
 
   .container {
