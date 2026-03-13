@@ -542,7 +542,7 @@ body::after {
   }
 
   .container {
-    padding: 15rem 1rem 15rem 1rem; /* Jarak atas tetap jauh sesuai kemauan kamu */
+    padding: 5rem 1rem 12rem 1rem; /* Profil naik ke atas kembali, bawah tetap lega */
     width: 94%;
     margin: 0 auto;
     animation: none !important;
@@ -551,7 +551,7 @@ body::after {
   .profile {
     animation-duration: 0.6s;
     margin-top: 0;
-    margin-bottom: 0.8rem; /* Lebih rapat ke link list */
+    margin-bottom: 2.5rem; /* Jarak lebih pas ke link pertama */
   }
 
   .loaded .profile-info {
@@ -584,7 +584,7 @@ body::after {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 0.8rem; /* Lebih sempit dan rapat agar muat di satu layar HP */
+    gap: 2.5rem; /* Dijauhkan lagi antar link-nya agar enak di-scroll */
   }
 
   .link-card {
