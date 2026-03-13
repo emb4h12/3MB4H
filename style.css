@@ -538,19 +538,19 @@ body {
   }
 
   .container {
-    padding: 10rem 1rem 12rem 1rem; /* Jarak atas jauh lebih lega biar foto benar-benar aman dari bar browser */
+    padding: 18rem 1rem 15rem 1rem; /* Jarak atas ditarik jauh ke bawah biar benar-benar lega */
     width: 94%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Biar konten mulai dari atas, bukan pas di tengah */
+    justify-content: flex-start;
     animation-duration: 0.7s;
   }
 
   .profile {
     animation-duration: 0.6s;
-    margin-top: 2rem;
-    margin-bottom: 3rem; /* Sekalian kasih jarak lebih ke link di bawahnya */
+    margin-top: 4rem; /* Ekstra jarak dari kontainer */
+    margin-bottom: 5rem; /* Jarak ke link pertama sangat lega */
   }
 
   .loaded .profile-info {
@@ -580,7 +580,7 @@ body {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 2.5rem; /* Dijauhkan lagi supaya setiap link punya ruang yang sangat lega */
+    gap: 4rem; /* Jarak antar tombol link dibuat sangat jauh supaya enak di-scroll */
   }
 
   .link-card {
@@ -628,8 +628,9 @@ body {
   }
 
   .copyright {
-    margin-bottom: 1rem;
-    padding-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 6rem; /* Ekstra ruang bawah supaya tidak tertutup player saat scroll mentok */
     opacity: 0.8;
   }
 }
