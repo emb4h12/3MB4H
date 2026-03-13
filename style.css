@@ -533,21 +533,23 @@ body {
     background-position: center bottom; /* Fokus ke mobil/karakter di HP */
     background-attachment: scroll; /* Mengatasi bug 'white gap' di HP */
     min-height: 100vh;
+    overflow-y: auto !important; /* Biar bisa di-scroll kalau konten kepanjangan */
+    overflow-x: hidden;
   }
 
   .container {
-    padding: 2.5rem 1rem 8rem 1rem;
+    padding: 5rem 1rem 12rem 1rem; /* Jarak atas lebih lega biar foto nggak nempel browser */
     width: 94%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Biar konten mulai dari atas, bukan pas di tengah */
     animation-duration: 0.7s;
   }
 
   .profile {
     animation-duration: 0.6s;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem; /* Ditambah jaraknya biar nggak terlalu mepet ke link */
   }
 
   .loaded .profile-info {
@@ -577,7 +579,7 @@ body {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 0.85rem;
+    gap: 1.5rem; /* Dijauhkan sedikit biar lebih lega pas scroll */
   }
 
   .link-card {
