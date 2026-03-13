@@ -531,14 +531,13 @@ body {
   body {
     background-size: cover;
     background-position: center bottom; /* Fokus ke mobil/karakter di HP */
-    background-attachment: scroll; /* Mengatasi bug 'white gap' di HP */
+    background-attachment: scroll;
     min-height: 100vh;
-    overflow-y: auto !important; /* Biar bisa di-scroll kalau konten kepanjangan */
-    overflow-x: hidden;
+    overflow: hidden !important; /* Hilangkan scroll lagi sesuai permintaan */
   }
 
   .container {
-    padding: 3rem 1rem 8rem 1rem; /* Posisi standar Linktree: mulai dari atas */
+    padding: 2rem 1rem 6rem 1rem; /* Padding lebih kecil agar muat satu layar */
     width: 94%;
     min-height: 100vh;
     display: flex;
@@ -550,7 +549,7 @@ body {
   .profile {
     animation-duration: 0.6s;
     margin-top: 0;
-    margin-bottom: 2rem; /* Jarak standar ke link */
+    margin-bottom: 1.25rem; /* Kurangi jarak bawah profil */
   }
 
   .loaded .profile-info {
@@ -580,7 +579,7 @@ body {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 1rem; /* Jarak rapat dan rapi ala Linktree */
+    gap: 0.8rem; /* Lebih sempit dan rapat agar muat di satu layar HP */
   }
 
   .link-card {
@@ -628,9 +627,9 @@ body {
   }
 
   .copyright {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    padding-bottom: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 2rem;
     opacity: 0.6;
   }
 }
