@@ -153,23 +153,7 @@ body {
   to { transform: rotate(360deg); }
 }
 
-@media (max-width: 480px) {
-  .lofi-player {
-    bottom: 20px;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 6px;
-    width: 52px; /* Lebar tetap saat tertutup agar logo pas di tengah */
-  }
 
-  .lofi-player:hover, .lofi-player.playing {
-    width: auto;
-    max-width: 250px;
-    padding-right: 15px;
-    transform: translateX(-50%);
-  }
-}
 
 .container {
   width: 90%;
@@ -621,7 +605,8 @@ body {
   }
 
   .lofi-player {
-    bottom: 25px;
+    top: 20px; /* Pindah ke ATAS agar tidak menutupi link & copyright di bawah */
+    bottom: auto;
     right: 20px;
     left: auto;
     transform: none;
