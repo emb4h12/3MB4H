@@ -21,19 +21,29 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  /* Latar Belakang Parallax */
+  overflow-x: hidden;
+}
+
+/* Background Layer - Memastikan full cover dan lancar di HP */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
               url('assets/background.png');
-  background-size: 110% 110%; /* Sedikit lebih besar untuk efek parallax */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-position 0.2s ease-out;
+  z-index: -1; /* Di belakang konten */
+  pointer-events: none;
 }
 
 /* Film Grain Overlay */
@@ -519,12 +529,10 @@ body {
 /* Responsive - Diperluas ke 768px untuk cover semua jenis HP modern */
 @media (max-width: 768px) {
   body {
-    background-size: cover;
-    background-position: center bottom; /* Fokus ke mobil/karakter di HP */
-    background-attachment: scroll;
     min-height: 100vh;
-    overflow-y: auto !important; /* Aktifkan scroll lagi supaya konten yang digeser ke bawah tidak kepotong/tertutup */
+    overflow-y: auto !important;
     overflow-x: hidden;
+    background-attachment: scroll;
   }
 
   .container {
