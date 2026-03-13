@@ -537,19 +537,20 @@ body {
   }
 
   .container {
-    padding: 2rem 1rem 6rem 1rem; /* Padding lebih kecil agar muat satu layar */
+    padding: 12rem 1rem 6rem 1rem; /* Digeser ke bawah semua sesuai permintaan */
     width: 94%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    animation: none; /* Matikan efek melayang/trampolin di HP agar diam */
     animation-duration: 0.7s;
   }
 
   .profile {
     animation-duration: 0.6s;
     margin-top: 0;
-    margin-bottom: 1.25rem; /* Kurangi jarak bawah profil */
+    margin-bottom: 0.8rem; /* Lebih rapat ke link list */
   }
 
   .loaded .profile-info {
@@ -558,16 +559,19 @@ body {
 
   .profile h1 {
     font-size: 1.8rem;
+    margin-bottom: 0; /* Menempel ke bio */
   }
 
   .profile p {
     font-size: 0.9rem;
     padding: 0 10px;
+    margin-bottom: 0.2rem; /* Menempel ke socials */
   }
 
   .profile-img {
     width: 100px;
     height: 100px;
+    margin-bottom: 0.2rem; /* Menempel ke nama */
     transition: opacity 0.5s ease;
   }
 
@@ -605,7 +609,7 @@ body {
   }
 
   .socials {
-    margin-top: 1.5rem;
+    margin-top: 0.2rem; /* Sangat menempel ke bio di atasnya */
     gap: 1.25rem;
   }
 
