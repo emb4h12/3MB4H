@@ -594,10 +594,10 @@ body {
   }
 
   .lofi-player {
-    bottom: 20px;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 25px;
+    right: 20px;
+    left: auto;
+    transform: none;
     padding: 6px;
     width: 52px;
     z-index: 1100;
@@ -607,11 +607,12 @@ body {
     width: auto;
     max-width: 250px;
     padding-right: 15px;
-    transform: translateX(-50%);
+    transform: none;
   }
 
   .copyright {
     margin-bottom: 1rem;
     padding-bottom: 2rem;
+    opacity: 0.8;
   }
 }
