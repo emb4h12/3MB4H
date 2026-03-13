@@ -543,7 +543,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    animation: none; /* Matikan efek melayang/trampolin di HP agar diam */
+    animation: none !important; /* Force matikan efek trampolin di HP asli */
     animation-duration: 0.7s;
   }
 
