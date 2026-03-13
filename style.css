@@ -538,7 +538,7 @@ body {
   }
 
   .container {
-    padding: 18rem 1rem 15rem 1rem; /* Jarak atas ditarik jauh ke bawah biar benar-benar lega */
+    padding: 25rem 1rem 15rem 1rem; /* Didorong lebih jauh lagi ke bawah */
     width: 94%;
     min-height: 100vh;
     display: flex;
@@ -549,7 +549,7 @@ body {
 
   .profile {
     animation-duration: 0.6s;
-    margin-top: 4rem; /* Ekstra jarak dari kontainer */
+    margin-top: 6rem; /* Ekstra jarak tambahan dari atas */
     margin-bottom: 5rem; /* Jarak ke link pertama sangat lega */
   }
 
