@@ -538,7 +538,7 @@ body {
   }
 
   .container {
-    padding: 5rem 1rem 12rem 1rem; /* Jarak atas lebih lega biar foto nggak nempel browser */
+    padding: 10rem 1rem 12rem 1rem; /* Jarak atas jauh lebih lega biar foto benar-benar aman dari bar browser */
     width: 94%;
     min-height: 100vh;
     display: flex;
@@ -549,7 +549,8 @@ body {
 
   .profile {
     animation-duration: 0.6s;
-    margin-bottom: 2.5rem; /* Ditambah jaraknya biar nggak terlalu mepet ke link */
+    margin-top: 2rem;
+    margin-bottom: 3rem; /* Sekalian kasih jarak lebih ke link di bawahnya */
   }
 
   .loaded .profile-info {
@@ -579,7 +580,7 @@ body {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 1.5rem; /* Dijauhkan sedikit biar lebih lega pas scroll */
+    gap: 2.5rem; /* Dijauhkan lagi supaya setiap link punya ruang yang sangat lega */
   }
 
   .link-card {
