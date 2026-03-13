@@ -539,11 +539,12 @@ body {
     background-position: center bottom; /* Fokus ke mobil/karakter di HP */
     background-attachment: scroll;
     min-height: 100vh;
-    overflow: hidden !important; /* Hilangkan scroll lagi sesuai permintaan */
+    overflow-y: auto !important; /* Aktifkan scroll lagi supaya konten yang digeser ke bawah tidak kepotong/tertutup */
+    overflow-x: hidden;
   }
 
   .container {
-    padding: 12rem 1rem 6rem 1rem; /* Digeser ke bawah semua sesuai permintaan */
+    padding: 12rem 1rem 20rem 1rem; /* Padding bawah diperbesar drastis agar tidak tertutup player music */
     width: 94%;
     min-height: 100vh;
     display: flex;
