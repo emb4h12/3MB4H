@@ -10,11 +10,18 @@
   --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none !important; /* Hide default for custom cursor */
+  cursor: none !important;
 }
 
 body {
@@ -22,9 +29,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   min-height: 100vh;
-  margin: 0;
   display: flex;
-  flex-direction: column; /* Ubah ke column agar scroll mengalir ke bawah */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
@@ -34,16 +40,16 @@ body {
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -5%; /* Salani sedikit ke atas untuk antisipasi white bar browser */
+  left: -5%;
+  width: 110%; /* Lebih besar sedikit biar benar-benar nutup */
+  height: 110%;
   background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
               url('assets/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Di belakang konten */
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -530,22 +536,16 @@ body::after {
 /* Responsive - Diperluas ke 768px untuk cover semua jenis HP modern */
 @media (max-width: 768px) {
   body {
-    height: auto !important; /* Biar body bisa memanjang sesuai konten */
-    min-height: 100vh;
-    overflow-y: visible !important; /* Gunakan visible agar scroll induk aktif */
-    overflow-x: hidden;
-    display: block; /* Agar container mengalir secara alami */
+    display: block; /* Matikan flex agar scroll normal */
+    height: auto !important;
+    overflow-y: auto !important;
   }
 
   .container {
-    padding: 12rem 1rem 20rem 1rem; /* Padding bawah diperbesar drastis agar tidak tertutup player music */
+    padding: 15rem 1rem 15rem 1rem; /* Jarak atas tetap jauh sesuai kemauan kamu */
     width: 94%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    animation: none !important; /* Force matikan efek trampolin di HP asli */
-    animation-duration: 0.7s;
+    margin: 0 auto;
+    animation: none !important;
   }
 
   .profile {
@@ -615,14 +615,14 @@ body::after {
   }
 
   .lofi-player {
-    top: 20px; /* Pindah ke ATAS agar tidak menutupi link & copyright di bawah */
-    bottom: auto;
+    position: fixed;
+    top: 20px !important;
+    bottom: auto !important;
     right: 20px;
     left: auto;
-    transform: none;
     padding: 6px;
     width: 52px;
-    z-index: 1100;
+    z-index: 2000;
   }
 
   .lofi-player:hover, .lofi-player.playing {
