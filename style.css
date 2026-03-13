@@ -536,16 +536,22 @@ body {
   }
 
   .container {
-    padding: 2.5rem 1rem 8rem 1rem; /* Padding bawah lebih besar (8rem) */
+    padding: 2.5rem 1rem 8rem 1rem;
     width: 94%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation-duration: 0.7s;
   }
 
   .profile {
+    animation-duration: 0.6s;
     margin-bottom: 1.5rem;
+  }
+
+  .loaded .profile-info {
+    animation-duration: 0.8s;
   }
 
   .profile h1 {
@@ -560,7 +566,15 @@ body {
   .profile-img {
     width: 100px;
     height: 100px;
+    transition: opacity 0.5s ease;
   }
+
+  /* Mengurangi jeda animasi di HP agar terasa lebih cepat */
+  .loaded .link-card:nth-child(1) { animation-delay: 0.3s; }
+  .loaded .link-card:nth-child(2) { animation-delay: 0.4s; }
+  .loaded .link-card:nth-child(3) { animation-delay: 0.5s; }
+  .loaded .link-card:nth-child(4) { animation-delay: 0.6s; }
+  .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
     gap: 0.85rem;
