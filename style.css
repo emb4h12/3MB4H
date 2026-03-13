@@ -177,7 +177,13 @@ body {
   padding: 3rem;
   text-align: center;
   z-index: 10;
-  animation: float 6s ease-in-out infinite; /* Floating Animation */
+}
+
+/* Hanya jalankan efek melayang di Desktop (layar lebar) */
+@media (min-width: 769px) {
+  .container {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -526,8 +532,8 @@ body {
   to { opacity: 1; }
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+/* Responsive - Diperluas ke 768px untuk cover semua jenis HP modern */
+@media (max-width: 768px) {
   body {
     background-size: cover;
     background-position: center bottom; /* Fokus ke mobil/karakter di HP */
