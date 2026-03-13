@@ -538,7 +538,7 @@ body {
   }
 
   .container {
-    padding: 25rem 1rem 15rem 1rem; /* Didorong lebih jauh lagi ke bawah */
+    padding: 3rem 1rem 8rem 1rem; /* Posisi standar Linktree: mulai dari atas */
     width: 94%;
     min-height: 100vh;
     display: flex;
@@ -549,8 +549,8 @@ body {
 
   .profile {
     animation-duration: 0.6s;
-    margin-top: 6rem; /* Ekstra jarak tambahan dari atas */
-    margin-bottom: 5rem; /* Jarak ke link pertama sangat lega */
+    margin-top: 0;
+    margin-bottom: 2rem; /* Jarak standar ke link */
   }
 
   .loaded .profile-info {
@@ -580,7 +580,7 @@ body {
   .loaded .link-card:nth-child(5) { animation-delay: 0.7s; }
 
   .links {
-    gap: 4rem; /* Jarak antar tombol link dibuat sangat jauh supaya enak di-scroll */
+    gap: 1rem; /* Jarak rapat dan rapi ala Linktree */
   }
 
   .link-card {
@@ -628,9 +628,9 @@ body {
   }
 
   .copyright {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding-bottom: 6rem; /* Ekstra ruang bawah supaya tidak tertutup player saat scroll mentok */
-    opacity: 0.8;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 4rem;
+    opacity: 0.6;
   }
 }
